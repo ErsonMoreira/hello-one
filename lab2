@@ -1,0 +1,84 @@
+struct User {
+    string username;
+    string password;
+    string role;      // Authorization role:"admin", "editor", "viewer"
+    User* next;
+
+    User(const string& u, const string& p, const string& r = "viewer") {
+        username = u;
+        password = p;
+        role = r;
+        next = nullptr;
+    }
+};
+
+bool insertUser(User*& head, const string& username, const string& password, const string& role = "viewer");
+
+bool authorize(User* head, const string& username, const string& action);
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"Hello World";
+    insertUser("erson","1234","admin");
+
+    return 0;
+}
+
+
+bool insertUser(User*& head, const string& username, const string& password, const string& role = "viewer"){
+   if(User* head == nullptr){
+   head = newUser;
+   cin >> username;
+   
+   if(username == username){
+       cout << "This username already exists! /n";
+    return false;
+   }
+   cin >> password;
+   
+   User*role = viewer;
+   
+   newUser -> next = head;
+   head = newUser;
+   }
+   return true;
+};
+
+bool authorize(User* head, const string& username, const string& action){
+    User* current = head;
+    while(current != nullptr){
+        findUser(head, username);
+        if(current == nullptr){
+            return false;
+        }
+        else if(current -> username == username){
+            if(role == admin){
+                action == "delete" || action == "insert" || action == "view";
+                return true;
+            }else if(role == editor){
+                action == "insert" || action == "view";
+                return true;
+            }else if(action == "view"){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        current = current -> next;
+    }
+    return false;
+};
+
+User* findUser(User* head, const string& username) {
+    User* current = head;
+    while (current != nullptr) {
+        if (current->username == username) {
+            return current; 
+        }
+        current = current->next;
+    }
+    return nullptr; 
+}
