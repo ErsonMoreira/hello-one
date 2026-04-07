@@ -1,0 +1,102 @@
+#Session 1:
+
+#1.) Write a Python program that:
+ #   Creates a tuple with at least five elements (a mix of numbers and strings).
+  #  Prints the first and last element.
+breakfast = tuple(("yogurt", 2, "Banana", 4, "Cereal"))
+print(breakfast[0],breakfast[4])
+
+#2.) Given the tuple:
+ #   person = ("Alice", 25, "Engineer", "New York")
+	#	Unpack the values into separate variables and print them.
+	#	Modify the age by creating a new tuple with updated data (since tuples are immutable).
+person = ("Alice", 25, "Engineer", "New York")
+name,age,job,location = person[0],person[1],person[-2],person[-1]
+#name,age,job,location = person
+print(name,age,job,location)
+switch = list(person)
+switch[1] = 27
+person1 = tuple(switch)
+print(person1)	
+
+#3.) Write a program that:
+ #   Creates two sets: one with even numbers from 1 to 10, and another with odd numbers from 1 to 10.
+  #  Finds and print their union, intersection, and difference.
+	
+#4.) Given a list:
+#	numbers = [3, 2, 2, 1, 5, 5, 4, 6, 7, 6]
+#		Convert it to a set to remove duplicates.
+#		Convert it back to a sorted list and print the result.
+numbers = [3, 2, 2, 1, 5, 5, 4, 6, 7, 6]
+send = set(numbers)
+#{item for item in numbers}
+sorted = list(send)
+print(sorted)
+
+#5.) Create a set of fruits: {"apple", "banana", "cherry"}.
+ #   Add a new fruit to the set.
+  #  Remove an existing fruit.
+   # Check if "mango" is in the set and print an appropriate message.
+fruits = set(["apple", "banana", "cherry"])
+fruits.add("grape")
+fruits.discard("cherry")
+print(fruits)
+if "apple" in fruits:
+    print("Yes")
+
+Session 2:
+
+#1.) Write a Python function that takes a list of numbers, converts it into a set, and returns both the list and the set.
+numbers = [1, 2, 3, 4, 5, 6, 7]
+set_numbers = set(numbers)
+print(numbers,"", set_numbers)
+
+#2.) Given the following dictionary:
+ #   students = {"Alice": 85, "Bob": 78, "Charlie": 92}
+#
+ #   Write Python code to:
+  #      Add a new student "David" with a score of 88.
+   #     Update "Alice"'s score to 90.
+    #    Remove "Bob" from the dictionary.
+     #   Print the final dictionary.
+students = {"Alice": 85, "Bob": 78, "Charlie": 92}
+students["David"] = 88
+students["Alice"] = 90
+students.pop("Bob")
+#del students["Bob"]
+print(students)
+
+#3.) Given two sets:
+ #   set1 = {10, 11, 12, 13, 14, 15}  
+  #  set2 = {10, 14, 15, 16, 17, 18}  
+#
+ #   Write Python code to:
+  #      Find and print the intersection of set1 and set2.
+   #     Find and print the union of set1 and set2.
+    #    Find and print the difference between set1 and set2 (elements in set1 but not in set2).
+def main():
+    set1 = {10, 11, 12, 13, 14, 15}  
+    set2 = {10, 14, 15, 16, 17, 18}
+    inner = intersect(set1,set2)
+    gammon = join(set1,set2)
+    diff = alt(set1,set2)
+    print(f'The intersection is: {inner}')
+    print(f'The union is: {gammon}')
+    print(f'The difference is: {diff}')
+
+def intersect(a,b):
+    #bet = a.intersection(b)
+    bet = a & b
+    return bet
+
+def join(x,y):
+    #whole = x|y
+    whole = x.union(y)
+    return whole
+
+def alt(s,f):
+    #less = s.difference(f)
+    less = s - f
+    return less
+    
+main()
