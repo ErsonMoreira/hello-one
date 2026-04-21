@@ -1,0 +1,65 @@
+#Session 1
+
+#1.) The Car "Odometer"
+
+ #   Create a class called Car with attributes make, model, and mileage (set mileage to 0 by default).
+
+#    Add a method drive(self, miles) that adds the given miles to the current mileage.
+#   Add a method get_miles(self) that returns the mileage attribute.
+
+ 
+#2.) The Temperature Converter
+
+ #   Create a class WeatherSensor.
+
+  #  The __init__ should take a temperature in Celsius. 
+
+   # Add a method to_fahrenheit(self) that performs the conversion and returns the result. Formula: F = (C × 9/5) + 32
+
+
+#3.) The Character Creator
+#  Create a Hero class with name and health (default 100).
+#    Add a method take_damage(self, amount) that subtracts the amount from health.
+#    Create two heroes and make a simple script where Hero A "attacks" Hero B by calling Hero B's take_damage method.
+class Hero:
+    def __init__(self, name, health=100):
+        self.name = name
+        self.health = health
+
+    def take_damage(self, amount):
+        self.health -= amount
+        print(f'{self.name} is losing health! {self.health}')
+
+ahero = Hero("Hercules")
+bhero = Hero("Perseus")
+print(f'{ahero.name} attacks {bhero.name}')
+bhero.take_damage(25)
+#Session 2
+
+#1.) Create a class called Dog. Give it an __init__ method that takes a name and a breed.
+    Create two different dog objects (e.g., "Rex" the "German Shepherd" and "Bella" the "Beagle") and print their names.
+
+
+#2.) Create a class Rectangle that takes length and width in its __init__.
+#    Add a method called get_area() that returns the result of length * width.
+class Rectangle:
+
+#3.) Create a class SmartLight. It should have an attribute is_on which starts as False.
+#    Write a method toggle() that switches the light from True to False (or vice versa) every time it is called.
+
+
+#4.) Create a python BankAccount class with an attribute balance set to 0.
+ #   Add a method called deposit(amount) that adds money to the balance, and a show_balance() method to print it.
+class BankAccount:
+    def __init__(self,balance=0):
+        self.balance = balance
+    def deposit(self,amount):
+        self.balance += amount
+    def show_balance(self):
+        print(f'You have a balance of: ${self.balance}')
+
+dep1 = BankAccount(50)
+dep1.show_balance()
+
+#5.) Create a class Book with title and author.
+#   Create a list called library. Add three different Book objects to that list. Loop through the list and print: "Reading [Title] by [Author]" for each.
