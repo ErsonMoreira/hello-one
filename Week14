@@ -1,0 +1,105 @@
+Python Coding Activity: Classes and Inheritance 
+Part A: Classes 
+Question 1: Student Class 
+Create a class called Student with attributes: name, age, grade. 
+Methods: 
+- display_info(): prints student details 
+- is_passing(): returns 'Passing' if grade ≥ 50, else 'Failing' 
+Task: 
+- Prompt user for input 
+- Create object and display info and passing status 
+
+Question 2: Rectangle Class 
+Create a class Rectangle with attributes: length, width. 
+Methods: 
+- area(): returns area 
+- perimeter(): returns perimeter 
+Task: 
+- Ask user for values and display results 
+
+Question 3: BankAccount Class 
+Create a class BankAccount with attributes: account_name, balance. 
+Methods: 
+- deposit(amount) 
+- withdraw(amount)  
+- display_balance() 
+Task: 
+- Prompt user for input and perform transaction 
+
+#3
+from datetime import date
+print(date.today())
+class BankAccount:
+    def __init__(self, account_name, balance=1000):
+        self.acccount_name = account_name
+        self.balance = balance
+    def deposit(self,amount):
+        print(date.today())
+        self.balance += amount
+        self.display_balance()
+    def withdraw(self,amount):
+        print(date.today())
+        self.balance -= amount
+        self.display_balance()
+    def display_balance(self):
+        print(date.today())
+        print(f'You have a balance of: ${self.balance}')
+    def next(self):
+        action = input('To deposit more, d, To withdraw, w, To end transaction, n: ' )
+        if action == 'w':
+            less = int(input('How much would you like to withdraw: $'))
+            self.withdraw(less)  
+        elif action == 'd':
+            add = int(input('How much would you like to deposit: $'))
+            self.deposit(add)
+        else:
+            self.display_balance()
+user = input('Enter account name: ')
+account = BankAccount(user) 
+account.next()
+
+
+Question 4: Car Class 
+Create a class Car with attributes: brand, model, year. 
+Methods:
+- car_age() 
+- display_info() 
+Task: 
+-Prompt user and display details and age 
+
+Part B: Inheritance 
+Question 5: Person → Teacher 
+Base class Person with attributes: name, age. 
+Methods: 
+- display_info() 
+- greet() 
+Subclass Teacher adds subject. 
+Methods: 
+- override display_info() 
+- teach() 
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+def get
+
+
+Question 6: Animal → Dog 
+Base class Animal with attribute: name. 
+Methods: 
+- sound() 
+- move() 
+Subclass Dog: 
+- override sound() 
+- fetch() 
+
+Question 7: Employee → Manager 
+Base class Employee with attributes: name, salary. 
+Methods: 
+- display_info() 
+- annual_salary() 
+Subclass Manager: 
+- override display_info() 
+- bonus() 
