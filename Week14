@@ -103,3 +103,44 @@ Methods:
 Subclass Manager: 
 - override display_info() 
 - bonus() 
+
+
+Python Coding Activity: Classes and Inheritance 
+Instructions: - Write a complete Python program for each question - All programs must use user input - Use meaningful variable names and proper 
+indentation - Display clear and labeled output 
+PART A: CLASSES 
+Question 1: Student Class 
+A school wants a simple system to store and evaluate 
+student performance. 
+Requirements: - Create a class Student with attributes: name, age, 
+grade - Methods: 
+display_info() -> prints all student details 
+is_passing() -> returns 'Passing' if grade >= 50, else 
+'Failing' 
+Task: - Prompt user for name, age, and grade - Create object and call both methods 
+Question 2: Rectangle Class 
+A construction company needs a tool to calculate 
+dimensions. 
+Requirements: - Attributes: length, width - Methods: area(), perimeter() 
+Task: - Input length and width - Display area and perimeter 
+Question 3: BankAccount Class 
+Simulate basic banking transactions. 
+Requirements: - Attributes: account_name, balance - Methods: deposit(), withdraw(), display_balance() 
+Task: - Input account details - Perform deposit/withdraw - Display updated balance 
+Question 4: Car Class 
+Requirements: - Attributes: brand, model, year - Methods: display_info(), car_age() 
+Task: - Input car details - Display info and age 
+PART B: INHERITANCE 
+Question 5: Person -> Teacher 
+Base class Person: - Attributes: name, age - Methods: display_info(), greet() 
+Subclass Teacher: - Attribute: subject - Methods: override display_info(), teach() 
+Task: - Input teacher details - Call all methods 
+Question 6: Animal -> Dog 
+Base class Animal: - Attribute: name - Methods: sound(), move() 
+Subclass Dog: - Override sound() - Add fetch() 
+Task: - Input dog name - Call all methods 
+Question 7: Employee -> Manager 
+Base class Employee: - Attributes: name, salary - Methods: display_info(), annual_salary() 
+Subclass Manager: - Attribute: department - Methods: bonus(), override display_info() 
+Task: - Input manager details 
+Track vehicle details. - Display info, salary, and bonus 
